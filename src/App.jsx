@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import FeaturedPost from './components/FeaturedPost'
 import PostList from './components/PostList'
 import Footer from './components/Footer'
+import AuthSection from './components/AuthSection'
 
 function App() {
   const featuredPost = {
@@ -81,6 +82,7 @@ function App() {
       <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         <FeaturedPost post={featuredPost} />
         <PostList posts={posts} />
+        <AuthSection />
       </main>
 
       <Footer />
