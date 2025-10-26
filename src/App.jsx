@@ -3,6 +3,8 @@ import FeaturedPost from './components/FeaturedPost'
 import PostList from './components/PostList'
 import Footer from './components/Footer'
 import AuthSection from './components/AuthSection'
+import CreatePostSection from './components/CreatePostSection'
+import ThemeToggle from './components/ThemeToggle'
 
 function App() {
   const featuredPost = {
@@ -76,12 +78,14 @@ function App() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-white to-gray-50 text-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-white via-white to-gray-50 text-gray-900 dark:from-gray-950 dark:via-gray-950 dark:to-black dark:text-gray-100">
+      <ThemeToggle />
       <Navbar />
 
-      <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+      <main className="mx-auto max-w-6xl space-y-12 px-4 py-10 sm:px-6 lg:px-8">
         <FeaturedPost post={featuredPost} />
         <PostList posts={posts} />
+        <CreatePostSection />
         <AuthSection />
       </main>
 
